@@ -1,0 +1,64 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+body{
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App{
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(3,1fr);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.App>a{
+  width: 20vw;
+  border: solid black 3px;
+  overflow: hidden;
+  position: relative;
+  height: 80vh;
+  display: flex;
+  margin: 0 auto;
+  transition-duration: 1s;
+}
+.App>a>img{
+  position: absolute;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-20%);
+  transition-duration: 1s;
+}
+.App>a:hover{
+  width: 28vw;
+  border: solid rgb(235, 157, 40) 5px;
+}
+.App>a>img:hover{
+  left: 0;
+  transform: translateX(-50%);
+}

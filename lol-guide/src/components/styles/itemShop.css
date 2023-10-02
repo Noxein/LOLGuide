@@ -1,0 +1,71 @@
+.itemNav{
+    display: flex;
+    width: 100%;
+}
+.Menu{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.25rem;
+}
+.ItemStatList{
+    position: absolute;
+    width: 200px;
+}
+.searchField{
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0,0.5);
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1rem;
+}
+.ItemsDisplayed{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    padding: 40px 0;
+}
+.itemShop{
+    width: 1200px;
+    margin: 70px auto;
+}
+.singleItem>img{
+    border: rgba(255, 215, 0,0.5) solid 1px
+}
+.itemPrice{
+    text-align: center;
+    color: #AAA;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #130119 rgba(0,0,0,0);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgb(9, 24, 36);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #130119;
+    border-radius: 6px;
+    border: 0px solid #000000;
+  }
+  *::-webkit-scrollbar-corner {
+    background-color: red;
+  }

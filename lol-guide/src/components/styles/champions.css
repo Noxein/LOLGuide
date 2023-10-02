@@ -1,0 +1,89 @@
+.ChampionsMain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    color: white;
+    justify-content: center;
+}
+.singleChampion{
+    display: block;
+    text-align: center;
+}
+.singleChampion>p{
+    margin: 0;
+}
+.ChampionsPopUp{
+    width: 1200px;
+    height: 800px;
+    position: fixed;
+    background-color: steelblue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-position: center;
+    background-size: cover;
+    border: solid #ccc 3px;
+}
+.darkenMe{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.darkAround{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 50px;
+}
+.closePopUp{
+    position: fixed;
+    left: 50%;
+    bottom: 30px;
+    border: solid white 1px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.ChampionInfo>div>p{
+    margin: 0;
+}
+.ChampionInfo{
+    display: grid;
+    grid-template-columns: 1fr 1px 2fr;
+}
+.Champion{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    box-sizing: border-box;
+}
+.line{
+    background-color: white;
+    margin: 10px 0;
+}
+.ChampionSkills{
+    display: flex;
+    align-items: center;
+}
+.SkillsClickable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 600px;
+}
+.SkillsDisplay{
+    height: 100%
+}
+.SkillsClickable img{
+    border: solid white 1px
+}
