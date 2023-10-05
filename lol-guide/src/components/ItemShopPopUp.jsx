@@ -3,7 +3,6 @@ import './styles/popup.css'
 export default function Popup({itemID,setItem}){
     const [itemsData,setItemsData] = useState({})
     const [loading,setLoading] = useState(true)
-    const [firstItem,setFirstItem] = useState(false)
 
     useEffect(()=>{
         fetch('http://ddragon.leagueoflegends.com/cdn/13.18.1/data/en_US/item.json')

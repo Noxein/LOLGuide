@@ -1,6 +1,7 @@
 .itemNav{
-    display: flex;
+    display: grid;
     width: 100%;
+    grid-template-columns: 90% 10%;
 }
 .Menu{
     position: fixed;
@@ -69,3 +70,16 @@
   *::-webkit-scrollbar-corner {
     background-color: red;
   }
+.itemFilters{
+  width: 40vw;
+  position: absolute;
+  height: auto;
+  top: 30px;
+  left: 50%;
+  transform: translate(-50%,0);
+  background-color: #333;
+  border: solid white 3px
+}
+.BGShop{
+  position: relative;
+}

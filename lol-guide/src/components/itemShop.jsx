@@ -1,7 +1,9 @@
-import { Link } from 'react-router-dom';
 import { useState,useEffect } from 'react';
 import Popup from './ItemShopPopUp';
 import './styles/itemShop.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 
 let checkBoxesArr = {
   "Damage":false,
@@ -29,6 +31,7 @@ export default function ItemShop(){
     const [arrHolder,setArrHolder] = useState([])
     const [click,setClicked] = useState(true)
     const [filteredItems,setFilteredItems] = useState(itemsData)
+    const [swich,setSwich] = useState(true)
     const Params = [{name:"Attack Damage",fetchedName:"Damage"},{name:"Critical Strike",fetchedName:"CriticalStrike"},{name: "Attack Speed",fetchedName:"AttackSpeed"},{name:"On-Hit Effect",fetchedName:"OnHit"},
     {name:"Armor Penetration",fetchedName:"ArmorPenetration"},{name:"Ability Power",fetchedName:"SpellDamage"},{name:"Mana & Regeneration",fetchedName:"ManaRegen"},{name:"Magic Penetration",fetchedName:"MagicPenetration"},
     {name:"Health & Regeneration",fetchedName:"Health"}, {name:"Armor",fetchedName:"Armor"},{name:"Magic Resists",fetchedName:"SpellBlock"},{name:"Ability Haste",fetchedName:"AbilityHaste"},{name:"Movment",fetchedName:"NonbootsMovement"},{name:"Life Steal & Vamp",fetchedName:"LifeSteal"}]
@@ -104,21 +107,22 @@ export default function ItemShop(){
       }
     }
 
+    function toggleItemsFilter(){
+      if(swich===false){
+        setSwich(true)
+        document.querySelector('.itemFilters').classList.add('invisible')
+      }else{
+        setSwich(false)
+        document.querySelector('.itemFilters').classList.remove('invisible')
+      }
+    }
     return(<>
      <div className="BGShop">
          <div className="itemShop">
           <div className='itemNav'>
               <input onChange={(e)=>setSearch(e.target.value)} value={search} className='searchField' placeholder='Search'></input>
-              <div className='Menu'>
-                    {Params.map((param)=>(
-                    <div key={param.name} onClick={()=>clicked()} className='dropdownmenu'>
-                        <input type="checkbox" id={param.name} onChange={(e)=>filterItems(param.fetchedName,e.target.checked)}/>
-                        <label htmlFor={param.name}>
-                            {param.name}
-                        </label>
-                    </div>
-                    ))}
-            </div>
+              <button onClick={()=>toggleItemsFilter()}><FontAwesomeIcon icon={faBars} className="Circle"/> Filters</button>
+
           </div>
           <div className='Items'>
               {loading?(
@@ -140,7 +144,20 @@ export default function ItemShop(){
               )}
           </div>
           {loading?(<p>Loading</p>):(<Popup itemID={item} setItem={setItem}/>)}
-             </div>
+            </div>
+             <div className='itemFilters invisible'>
+
+              {Params.map((param)=>(
+                <div key={param.name} onClick={()=>clicked()} className='dropdownmenu'>
+                    <input type="checkbox" id={param.name} onChange={(e)=>filterItems(param.fetchedName,e.target.checked)}/>
+                    <label htmlFor={param.name}>
+                        {param.name}
+                    </label>
+                </div>
+              ))}
+
+            </div>
      </div>
+
     </>)
 }

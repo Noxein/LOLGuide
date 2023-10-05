@@ -24,7 +24,9 @@ body{
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+nav{
+  z-index: 5;
+}
 .App-link {
   color: #61dafb;
 }

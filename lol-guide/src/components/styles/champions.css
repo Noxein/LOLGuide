@@ -7,6 +7,7 @@
     margin-top: 60px;
     color: white;
     justify-content: center;
+    position: relative;
 }
 .singleChampion{
     display: block;
@@ -82,8 +83,58 @@
     height: 600px;
 }
 .SkillsDisplay{
-    height: 100%
+    height: 100%;
+    min-width: 700px;
+    display: flex;
+    flex-direction: column;
 }
 .SkillsClickable img{
     border: solid white 1px
+}
+.Circle2{
+    color: rgba(0, 0, 0, 0);
+}
+.Circle,
+.Circle2{
+    outline: solid white 2px;
+    border-radius: 50%;
+}
+.SpellsLevels{
+    display: flex;
+    margin-top: auto;
+    justify-content: center;
+    gap: 20px;
+}
+.skillCosts{
+    display: flex;
+    flex-direction: column;
+}
+.skillpointsIcons{
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    font-size: 5px;
+    margin-bottom: 10px;
+}
+.skillCosts>p{
+    margin: 0;
+}
+div.searchField>input{
+    border: none;
+
+}
+div.searchField{
+    width: 100%;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+.ChampsFilterMenu{
+    width: 40vw;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    background-color: #333;
+    border: solid white 3px
 }
